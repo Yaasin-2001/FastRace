@@ -25,9 +25,9 @@ public class UIScript : MonoBehaviour
     public GameObject NewLapRecord;
     public GameObject WrongWayText;
     public int TotalLaps = 3;
-    private int TotalCars = 1;
+    public int TotalCars = 1;
 
-
+    
     // Start is called before the first frame update
     void Start()
     {

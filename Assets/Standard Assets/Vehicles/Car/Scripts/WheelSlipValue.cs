@@ -10,8 +10,8 @@ public class WheelslipValue : MonoBehaviour
     public float TerrainSidewaysStiffness;
     public float SlidingForwardStiffness = 0.5f;
     public float SlidingSidewaysStiffness = 1.5f;
-    private bool SlideChange = false;
-    private bool Changed = false;
+   // private bool SlideChange = false;
+   // private bool Changed = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +21,7 @@ public class WheelslipValue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (SaveScript.BrakeSlide == false)
+       /* if (SaveScript.BrakeSlide == false)
         {
             if (SaveScript.OnTheRoad == true)
             {
@@ -72,6 +72,6 @@ public class WheelslipValue : MonoBehaviour
                 sFriction.stiffness = RoadSidewaysStiffness;
                 WheelC.sidewaysFriction = sFriction;
             }
-        }
+        }*/
     }
 }

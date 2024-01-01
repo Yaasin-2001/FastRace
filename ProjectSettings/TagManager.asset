@@ -9,6 +9,8 @@ TagManager:
   - RumbleStrip
   - Barrier
   - Progress
+  - AICar
+  - PrgoressAI
   layers:
   - Default
   - TransparentFX
