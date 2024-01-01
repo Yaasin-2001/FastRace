@@ -365,29 +365,35 @@ namespace UnityStandardAssets.Vehicles.Car
                 case CarDriveType.RearWheelDrive:
                     m_WheelColliders[2].GetGroundHit(out wheelHit);
                     AdjustTorque(wheelHit.forwardSlip);
-                    if (Player == true)
+                    if (wheelHit.collider)
                     {
-                        if (wheelHit.collider.CompareTag("RumbleStrip") && CurrentSpeed > 10)
+                        if (Player == true)
                         {
-                            SaveScript.Rumble2 = true;
-                        }
-                        else
-                        {
-                            SaveScript.Rumble2 = false;
+                            if (wheelHit.collider.CompareTag("RumbleStrip") && CurrentSpeed > 10)
+                            {
+                                SaveScript.Rumble1 = true;
+                            }
+                            else
+                            {
+                                SaveScript.Rumble1 = false;
+                            }
                         }
                     }
 
                     m_WheelColliders[3].GetGroundHit(out wheelHit);
                     AdjustTorque(wheelHit.forwardSlip);
-                    if (Player == true)
+                    if (wheelHit.collider)
                     {
-                        if (wheelHit.collider.CompareTag("RumbleStrip") && CurrentSpeed > 10)
+                        if (Player == true)
                         {
-                            SaveScript.Rumble2 = true;
-                        }
-                        else
-                        {
-                            SaveScript.Rumble2 = false;
+                            if (wheelHit.collider.CompareTag("RumbleStrip") && CurrentSpeed > 10)
+                            {
+                                SaveScript.Rumble2 = true;
+                            }
+                            else
+                            {
+                                SaveScript.Rumble2 = false;
+                            }
                         }
                     }
                     break;
