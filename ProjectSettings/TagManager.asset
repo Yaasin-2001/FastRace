@@ -8,6 +8,7 @@ TagManager:
   - Terrain
   - RumbleStrip
   - Barrier
+  - Progress
   layers:
   - Default
   - TransparentFX

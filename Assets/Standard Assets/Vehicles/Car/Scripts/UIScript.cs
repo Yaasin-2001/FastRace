@@ -17,10 +17,16 @@ public class UIScript : MonoBehaviour
     public Text BestLapTimeMinutes;
     public Text BestLapTimeSeconds;
     public Text CheckPointTime;
+    public Text WrongWayT;
+    public Text TotalLapsText;
+    public Text TotalCarsText;
+    public Text PlayersPosition;
     public GameObject CheckPointDisplay;
     public GameObject NewLapRecord;
-    public Text TotalLapsText;
+    public GameObject WrongWayText;
     public int TotalLaps = 3;
+    private int TotalCars = 1;
+
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +38,10 @@ public class UIScript : MonoBehaviour
         TotalLapsText.text = "/" + TotalLaps.ToString();
         CheckPointDisplay.SetActive(false);
         NewLapRecord.SetActive(false);
+        WrongWayText.SetActive(false);
+        SaveScript.MaxLaps = TotalLaps;
+        TotalCarsText.text = "/" + TotalCars.ToString();
+        PlayersPosition.text = "1";
 
     }
 
@@ -173,6 +183,29 @@ public class UIScript : MonoBehaviour
                 }
             }
         }
+
+        //Wrong way message
+        if (SaveScript.WrongWay == true)
+        {
+            WrongWayText.SetActive(true);
+        }
+        if (SaveScript.WrongWay == false)
+        {
+            WrongWayText.SetActive(false);
+        }
+
+        //Wrong Way Reset Text
+        if (SaveScript.WWTextReset == false)
+        {
+            WrongWayT.text = "WRONG WAY!";
+        }
+        if (SaveScript.WWTextReset == true)
+        {
+            WrongWayT.text = " ";
+        }
+
+        //Display Position
+        PlayersPosition.text = SaveScript.PlayerPosition.ToString();
     }
 
     IEnumerator CheckPointOff()
