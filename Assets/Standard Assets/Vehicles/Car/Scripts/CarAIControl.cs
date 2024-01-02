@@ -1,6 +1,8 @@
 using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using System.Collections;
+
 
 namespace UnityStandardAssets.Vehicles.Car
 {
@@ -45,6 +47,18 @@ namespace UnityStandardAssets.Vehicles.Car
         private float m_AvoidPathOffset;          // direction (-1 or 1) in which to offset path to avoid other car, whilst avoiding
         private Rigidbody m_Rigidbody;
 
+        private bool BarrierStop = false;
+
+        private bool RaceCompleted = false;
+        public bool AI1;
+        public bool AI2;
+        public bool AI3;
+        public bool AI4;
+        public bool AI5;
+        public bool AI6;
+        public bool AI7;
+
+
 
         private void Awake()
         {
@@ -68,7 +82,7 @@ namespace UnityStandardAssets.Vehicles.Car
             }
             else
             {
-                if (SaveScript.RaceStart == true)
+                if (SaveScript.RaceStart == true && RaceCompleted == false)
                 {
                     Vector3 fwd = transform.forward;
                     if (m_Rigidbody.velocity.magnitude > m_CarController.MaxSpeed * 0.1f)
@@ -170,8 +184,13 @@ namespace UnityStandardAssets.Vehicles.Car
                     float steer = Mathf.Clamp(targetAngle * m_SteerSensitivity, -1, 1) * Mathf.Sign(m_CarController.CurrentSpeed);
 
                     // feed input to the car controller.
+                    if(BarrierStop== false) { 
                     m_CarController.Move(steer, accel, accel, 0f);
-
+                    }
+                    if (BarrierStop == true)
+                    {
+                        m_CarController.Move(steer, -accel, -accel, 0f);
+                    }
                     // if appropriate, stop driving when we're close enough to the target.
                     if (m_StopWhenTargetReached && localTarget.magnitude < m_ReachTargetThreshold)
                     {
@@ -181,6 +200,72 @@ namespace UnityStandardAssets.Vehicles.Car
             }
         }
 
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.gameObject.CompareTag("Barrier"))
+            {
+                BarrierStop = true;
+            }
+            if(AI1 == true)
+                { 
+                    if(other.gameObject.CompareTag("AI1"))
+                    {
+                    StartCoroutine(StopDriving());
+                    }
+                 }
+            if (AI2 == true)
+            {
+                if (other.gameObject.CompareTag("AI2"))
+                {
+                    StartCoroutine(StopDriving());
+                }
+            }
+            if (AI3 == true)
+            {
+                if (other.gameObject.CompareTag("AI3"))
+                {
+                    StartCoroutine(StopDriving());
+                }
+            }
+            if (AI4 == true)
+            {
+                if (other.gameObject.CompareTag("AI4"))
+                {
+                    StartCoroutine(StopDriving());
+                }
+            }
+            if (AI5 == true)
+            {
+                if (other.gameObject.CompareTag("AI5"))
+                {
+                    StartCoroutine(StopDriving());
+                }
+            }
+            if (AI6 == true)
+            {
+                if (other.gameObject.CompareTag("AI6"))
+                {
+                    StartCoroutine(StopDriving());
+                }
+            }
+            if (AI7 == true)
+            {
+                if (other.gameObject.CompareTag("AI1"))
+                {
+                    StartCoroutine(StopDriving());
+                }
+            }
+
+        }
+        private void OnTriggerExit(Collider other)
+        {
+            if (other.gameObject.CompareTag("Barrier"))
+            {
+                StartCoroutine(BarrierReset());
+            }
+
+        }
+
 
         private void OnCollisionStay(Collision col)
         {
@@ -188,13 +273,19 @@ namespace UnityStandardAssets.Vehicles.Car
             if (col.rigidbody != null)
             {
                 var otherAI = col.rigidbody.GetComponent<CarAIControl>();
-                if (otherAI != null)
+                var PlayarCar = col.rigidbody.GetComponent<CarAIControl>();
+                if (otherAI != null || PlayarCar != null)
                 {
                     // we'll take evasive action for 1 second
                     m_AvoidOtherCarTime = Time.time + 1;
 
                     // but who's in front?...
                     if (Vector3.Angle(transform.forward, otherAI.transform.position - transform.position) < 90)
+                    {
+                        // the other ai is in front, so it is only good manners that we ought to brake...
+                        m_AvoidOtherCarSlowdown = 0.5f;
+                    }
+                    if (Vector3.Angle(transform.forward, PlayarCar.transform.position - transform.position) < 90)
                     {
                         // the other ai is in front, so it is only good manners that we ought to brake...
                         m_AvoidOtherCarSlowdown = 0.5f;
@@ -220,5 +311,19 @@ namespace UnityStandardAssets.Vehicles.Car
             m_Target = target;
             m_Driving = true;
         }
+        IEnumerator BarrierReset()
+        {
+            yield return new WaitForSeconds(Random.Range(1f, 5f));
+
+            BarrierStop = false;
+
+        }
+        IEnumerator StopDriving()
+        {
+            yield return new WaitForSeconds(Random.Range(1f, 9f));
+            RaceCompleted = true;
+            m_CarController.Move(0, 0, -1f, 1f);
+        }
+
     }
 }

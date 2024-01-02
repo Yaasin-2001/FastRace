@@ -17,11 +17,11 @@ public class FinishLine : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            //SaveScript.FinishPositionID++;
-           // PlayerFinishPosition = SaveScript.FinishPositionID;
+            SaveScript.FinishPositionID++;
+           PlayerFinishPosition = SaveScript.FinishPositionID;
             SaveScript.RaceOver = true;
             Time.timeScale = 0.2f;
-            //Leaderboard.SetActive(true);
+            Leaderboard.SetActive(true);
         }
     }
 }

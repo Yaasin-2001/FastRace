@@ -11,6 +11,21 @@ TagManager:
   - Progress
   - AICar
   - PrgoressAI
+  - ProgressAI2
+  - ProgressAI1
+  - ProgressAI3
+  - ProgressAI4
+  - ProgressAI5
+  - ProgressAI6
+  - ProgressAI7
+  - ProgressAI8
+  - AI1
+  - AI2
+  - AI3
+  - AI4
+  - AI5
+  - AI6
+  - AI7
   layers:
   - Default
   - TransparentFX
