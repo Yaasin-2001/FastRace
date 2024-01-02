@@ -12,8 +12,7 @@ public class UniversalSave : MonoBehaviour
     public static string PlayerName = "PLAYER";
     public static int RacesWon = 0;
     public static int RacesLost = 0;
-    public static bool SportsCar1Owned = false;
-    public static bool SportsCar2Owned = false;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -34,23 +33,7 @@ public class UniversalSave : MonoBehaviour
         PlayerPrefs.SetString("PlayName", PlayerName);
         PlayerPrefs.SetInt("WonRaces", RacesWon);
         PlayerPrefs.SetInt("LostRaces", RacesLost);
-        PlayerPrefs.SetInt("MyCar", SaveScript.SportsCarID);
-        if (SportsCar1Owned == false)
-        {
-            PlayerPrefs.SetInt("Car1", 0);
-        }
-        if (SportsCar1Owned == true)
-        {
-            PlayerPrefs.SetInt("Car1", 1);
-        }
-        if (SportsCar2Owned == false)
-        {
-            PlayerPrefs.SetInt("Car2", 0);
-        }
-        if (SportsCar2Owned == true)
-        {
-            PlayerPrefs.SetInt("Car2", 1);
-        }
+       
     }
     public void LoadStats()
     {
@@ -58,14 +41,7 @@ public class UniversalSave : MonoBehaviour
         PlayerName = PlayerPrefs.GetString("PlayName");
         RacesWon = PlayerPrefs.GetInt("WonRaces");
         RacesLost = PlayerPrefs.GetInt("LostRaces");
-        SaveScript.SportsCarID = PlayerPrefs.GetInt("MyCar");
-        if (PlayerPrefs.GetInt("Car1") == 1)
-        {
-            SportsCar1Owned = true;
-        }
-        if (PlayerPrefs.GetInt("Car2") == 1)
-        {
-            SportsCar2Owned = true;
-        }
+       
+       
     }
 }
