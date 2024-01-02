@@ -5,7 +5,7 @@ using UnityEngine;
 public class FinishLine : MonoBehaviour
 {
     public GameObject Leaderboard;
-    private string PlayerName;
+    public string PlayerName;
     public static int PlayerFinishPosition;
     public static string PName;
     private void Start()

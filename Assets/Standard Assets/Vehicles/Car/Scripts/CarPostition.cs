@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript1 : MonoBehaviour
+public class CarPosition : MonoBehaviour
 {
     public GameObject Slot1;
     public GameObject Slot2;
@@ -11,14 +11,10 @@ public class NewBehaviourScript1 : MonoBehaviour
     public GameObject Slot5;
     public GameObject Slot6;
     public GameObject Slot7;
-    
-
     public GameObject Stats;
     public int AICarNumber;
     public bool Player;
     private int Pos;
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -50,14 +46,11 @@ public class NewBehaviourScript1 : MonoBehaviour
         {
             Pos = FinishLineAI.AICar7FinishPosition;
         }
-        if (Player == true
-       )
+        if (Player == true)
         {
             Pos = FinishLine.PlayerFinishPosition;
         }
-
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -93,10 +86,5 @@ public class NewBehaviourScript1 : MonoBehaviour
         {
             Stats.transform.position = Slot7.transform.position;
         }
-
-
-
-
-
     }
 }
