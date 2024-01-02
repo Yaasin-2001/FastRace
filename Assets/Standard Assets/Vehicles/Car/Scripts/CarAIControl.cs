@@ -250,7 +250,7 @@ namespace UnityStandardAssets.Vehicles.Car
             }
             if (AI7 == true)
             {
-                if (other.gameObject.CompareTag("AI1"))
+                if (other.gameObject.CompareTag("AI7"))
                 {
                     StartCoroutine(StopDriving());
                 }

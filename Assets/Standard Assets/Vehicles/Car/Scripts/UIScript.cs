@@ -25,8 +25,8 @@ public class UIScript : MonoBehaviour
     public GameObject CheckPointDisplay;
     public GameObject NewLapRecord;
     public GameObject WrongWayText;
-    private int TotalLaps = 3;
-    private int TotalCars = 1;
+    public int TotalLaps = 3;
+    public int TotalCars = 1;
     public bool RaceTrack = true;
     public GameObject F1Opponent1;
     public GameObject F1Opponent2;

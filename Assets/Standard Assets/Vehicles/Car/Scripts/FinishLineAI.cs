@@ -12,30 +12,37 @@ public class FinishLineAI : MonoBehaviour
     public bool AI6;
     public bool AI7;
     public string CarName;
+
     public static int AICar1FinishPosition;
     public static string AICar1Name;
     public static float AICar1RTMinutes;
     public static float AICar1RTSeconds;
+
     public static int AICar2FinishPosition;
     public static string AICar2Name;
     public static float AICar2RTMinutes;
     public static float AICar2RTSeconds;
+
     public static int AICar3FinishPosition;
     public static string AICar3Name;
     public static float AICar3RTMinutes;
     public static float AICar3RTSeconds;
+
     public static int AICar4FinishPosition;
     public static string AICar4Name;
     public static float AICar4RTMinutes;
     public static float AICar4RTSeconds;
+
     public static int AICar5FinishPosition;
     public static string AICar5Name;
     public static float AICar5RTMinutes;
     public static float AICar5RTSeconds;
+
     public static int AICar6FinishPosition;
     public static string AICar6Name;
     public static float AICar6RTMinutes;
     public static float AICar6RTSeconds;
+
     public static int AICar7FinishPosition;
     public static string AICar7Name;
     public static float AICar7RTMinutes;

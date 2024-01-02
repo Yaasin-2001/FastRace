@@ -8,10 +8,12 @@ public class FinishLine : MonoBehaviour
     public string PlayerName;
     public static int PlayerFinishPosition;
     public static string PName;
+
     private void Start()
     {
         PlayerName = UniversalSave.PlayerName;
         PName = PlayerName;
+        
     }
     private void OnTriggerEnter(Collider other)
     {
