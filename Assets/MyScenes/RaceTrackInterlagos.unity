@@ -155,7 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
   m_OnCullStateChanged:
@@ -5898,8 +5898,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c1744d5146872448beac3c2a426cfb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Leaderboard: {fileID: 315734233}
-  PlayerName: 
+  Leaderboard: {fileID: 1937043910}
+  PlayerName: Player
 --- !u!1 &327670217
 GameObject:
   m_ObjectHideFlags: 0
@@ -16355,7 +16355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
   m_OnCullStateChanged:
@@ -23280,7 +23280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
   m_OnCullStateChanged:
@@ -33814,7 +33814,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
   m_OnCullStateChanged:
@@ -35457,7 +35457,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
   m_OnCullStateChanged:
@@ -37292,6 +37292,8 @@ MonoBehaviour:
   CheckPointDisplay: {fileID: 711609213}
   NewLapRecord: {fileID: 392542120}
   WrongWayText: {fileID: 186294098}
+  TotalLaps: 1
+  TotalCars: 6
   RaceTrack: 1
   F1Opponent1: {fileID: 3515762690051326092}
   F1Opponent2: {fileID: 135247188944134067}
@@ -45278,7 +45280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
   m_OnCullStateChanged:
@@ -46496,7 +46498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
   m_OnCullStateChanged:
@@ -63493,8 +63495,8 @@ SceneRoots:
   - {fileID: 1858465456}
   - {fileID: 615797838}
   - {fileID: 525575953}
-  - {fileID: 1335762311}
   - {fileID: 122472982}
+  - {fileID: 1335762311}
   - {fileID: 324738009}
   - {fileID: 1563423360}
   - {fileID: 1251108318}
