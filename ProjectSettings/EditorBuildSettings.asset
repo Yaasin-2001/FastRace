@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/InBuilt/OutdoorsScene.unity
-    guid: 8124e5870f4fd4c779e7a5f994e84ad1
+    path: Assets/MyScenes/MainMenu.unity
+    guid: d37d3beb419b7094d97a94e530ea90ab
+  - enabled: 1
+    path: Assets/MyScenes/RaceTrackSelection.unity
+    guid: dbd99fc8ede882d43adf1d31f042ea9d
   m_configObjects: {}
