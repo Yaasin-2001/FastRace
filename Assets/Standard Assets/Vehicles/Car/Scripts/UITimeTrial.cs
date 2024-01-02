@@ -107,40 +107,40 @@ public class UITimeTrial : MonoBehaviour
             WinMessage.text = "GOLD";
             GoldStar.SetActive(true);
             Credits.text = GoldCredits.ToString();
-            // UniversalSave.CreditAmount = UniversalSave.CreditAmount += GoldCredits;
-            //  UniversalSave.RacesWon++;
+             UniversalSave.CreditAmount = UniversalSave.CreditAmount += GoldCredits;
+             UniversalSave.RacesWon++;
         }
         if (SaveScript.Silver == true)
         {
             WinMessage.text = "SILVER";
             SilverStar.SetActive(true);
             Credits.text = SilverCredits.ToString();
-            //  UniversalSave.CreditAmount = UniversalSave.CreditAmount += SilverCredits;
-            //  UniversalSave.RacesWon++;
+              UniversalSave.CreditAmount = UniversalSave.CreditAmount += SilverCredits;
+             UniversalSave.RacesWon++;
         }
         if (SaveScript.Bronze == true)
         {
             WinMessage.text = "BRONZE";
             BronzeStar.SetActive(true);
             Credits.text = BronzeCredits.ToString();
-            //  UniversalSave.CreditAmount = UniversalSave.CreditAmount += BronzeCredits;
-            // UniversalSave.RacesWon++;
+             UniversalSave.CreditAmount = UniversalSave.CreditAmount += BronzeCredits;
+             UniversalSave.RacesWon++;
         }
         if (SaveScript.Fail == true)
         {
             WinMessage.text = "TRY AGAIN";
             Credits.text = "0";
-            //   UniversalSave.RacesLost++;
+               UniversalSave.RacesLost++;
         }
-        // UniversalSave.Saving = true;
+        UniversalSave.Saving = true;
     }
-    /* public void ReturnToMenu()
+     public void ReturnToMenu()
      {
          SceneManager.LoadScene(1);
      }
      public void QuitClose()
      {
          QuitPanel.SetActive(false);
-     }*/
+     }
 }
    

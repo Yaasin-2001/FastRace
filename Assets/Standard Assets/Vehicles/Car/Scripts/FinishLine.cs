@@ -10,7 +10,7 @@ public class FinishLine : MonoBehaviour
     public static string PName;
     private void Start()
     {
-       // PlayerName = UniversalSave.PlayerName;
+        PlayerName = UniversalSave.PlayerName;
         PName = PlayerName;
     }
     private void OnTriggerEnter(Collider other)
@@ -18,7 +18,7 @@ public class FinishLine : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             SaveScript.FinishPositionID++;
-           PlayerFinishPosition = SaveScript.FinishPositionID;
+            PlayerFinishPosition = SaveScript.FinishPositionID;
             SaveScript.RaceOver = true;
             Time.timeScale = 0.2f;
             Leaderboard.SetActive(true);

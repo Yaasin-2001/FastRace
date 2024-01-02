@@ -58,6 +58,7 @@ public class SaveScript : MonoBehaviour
     public static int AICar6LapNumber = 0;
     public static int AICar7LapNumber = 0;
     public static int FinishPositionID = 0;
+    public static int SportsCarID;
 
 
 

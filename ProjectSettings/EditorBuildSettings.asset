@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MyScenes/RaceTrackSelection.unity
     guid: dbd99fc8ede882d43adf1d31f042ea9d
+  - enabled: 1
+    path: Assets/MyScenes/TimeTrialInterlagos.unity
+    guid: 4317a579ba10b87458b91b5c04b2885c
+  - enabled: 1
+    path: Assets/MyScenes/RaceTrackInterlagos.unity
+    guid: 55c289550e7f6cf42a107b222392abc6
   m_configObjects: {}

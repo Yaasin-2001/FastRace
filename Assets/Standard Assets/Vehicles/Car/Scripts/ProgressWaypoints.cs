@@ -9,7 +9,6 @@ public class ProgressWaypoints : MonoBehaviour
     public bool PenaltyOption = false;
     public int PenaltyWayPoint;
     public int Position = 0;
-
     private int Lap1Position = 0;
     private int Lap2Position = 0;
     private int Lap3Position = 0;
@@ -22,8 +21,6 @@ public class ProgressWaypoints : MonoBehaviour
     private int Lap10Position = 0;
     private int Lap11Position = 0;
     private int Lap12Position = 0;
-
-    // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Progress"))
@@ -31,9 +28,8 @@ public class ProgressWaypoints : MonoBehaviour
             CarTracking = other.GetComponent<ProgressTracker>().CurrentWP;
             if (CarTracking < WPNumber)
             {
-
                 other.GetComponent<ProgressTracker>().CurrentWP = WPNumber;
-                // Debug.Log("CurrentWP =" + other.GetComponent<ProgressTracker>().CurrentWP);
+                //Debug.Log("CurrentWP =" + other.GetComponent<ProgressTracker>().CurrentWP);
                 if (SaveScript.LapNumber == 1)
                 {
                     Lap1Position++;
@@ -94,8 +90,6 @@ public class ProgressWaypoints : MonoBehaviour
                     Lap12Position++;
                     SaveScript.PlayerPosition = Lap12Position;
                 }
-                
-
             }
             if (CarTracking > WPNumber)
             {
@@ -111,9 +105,10 @@ public class ProgressWaypoints : MonoBehaviour
                 }
             }
         }
+
         if (other.gameObject.CompareTag("ProgressAI1"))
         {
-            if(SaveScript.AICar1LapNumber == 1)
+            if (SaveScript.AICar1LapNumber == 1)
             {
                 Lap1Position++;
             }
@@ -161,10 +156,7 @@ public class ProgressWaypoints : MonoBehaviour
             {
                 Lap12Position++;
             }
-
         }
-        //
-
         if (other.gameObject.CompareTag("ProgressAI2"))
         {
             if (SaveScript.AICar2LapNumber == 1)
@@ -215,11 +207,7 @@ public class ProgressWaypoints : MonoBehaviour
             {
                 Lap12Position++;
             }
-
         }
-
-        //
-
         if (other.gameObject.CompareTag("ProgressAI3"))
         {
             if (SaveScript.AICar3LapNumber == 1)
@@ -270,9 +258,7 @@ public class ProgressWaypoints : MonoBehaviour
             {
                 Lap12Position++;
             }
-
         }
-
         if (other.gameObject.CompareTag("ProgressAI4"))
         {
             if (SaveScript.AICar4LapNumber == 1)
@@ -323,7 +309,6 @@ public class ProgressWaypoints : MonoBehaviour
             {
                 Lap12Position++;
             }
-
         }
         if (other.gameObject.CompareTag("ProgressAI5"))
         {
@@ -375,7 +360,6 @@ public class ProgressWaypoints : MonoBehaviour
             {
                 Lap12Position++;
             }
-
         }
         if (other.gameObject.CompareTag("ProgressAI6"))
         {
@@ -427,7 +411,6 @@ public class ProgressWaypoints : MonoBehaviour
             {
                 Lap12Position++;
             }
-
         }
         if (other.gameObject.CompareTag("ProgressAI7"))
         {
@@ -479,11 +462,6 @@ public class ProgressWaypoints : MonoBehaviour
             {
                 Lap12Position++;
             }
-
         }
-
-
-
-
     }
 }

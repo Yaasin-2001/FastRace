@@ -9,14 +9,11 @@ public class ProgressTracker : MonoBehaviour
     public int CurrentWP = 0;
     public int ThisWPNumber;
     public int LastWPNumber;
-
     // Start is called before the first frame update
     void Start()
     {
         Player = GetComponent<AudioSource>();
     }
-
-    // Update is called once per frame
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Barrier"))
@@ -27,7 +24,6 @@ public class ProgressTracker : MonoBehaviour
                 Player.Play();
             }
         }
-
     }
     private void OnTriggerExit(Collider other)
     {
@@ -39,15 +35,8 @@ public class ProgressTracker : MonoBehaviour
             }
         }
     }
-
-
     private void Update()
-
     {
-        if(SaveScript.LapChange == true)
-        {
-            CurrentWP = 0;
-        }
         if (SaveScript.LapChange == true)
         {
             CurrentWP = 0;
@@ -70,5 +59,4 @@ public class ProgressTracker : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         ThisWPNumber = LastWPNumber;
     }
-
 }

@@ -12,46 +12,62 @@ public class FinishLineAI : MonoBehaviour
     public bool AI6;
     public bool AI7;
     public string CarName;
-
     public static int AICar1FinishPosition;
     public static string AICar1Name;
     public static float AICar1RTMinutes;
     public static float AICar1RTSeconds;
-
     public static int AICar2FinishPosition;
     public static string AICar2Name;
     public static float AICar2RTMinutes;
     public static float AICar2RTSeconds;
-
     public static int AICar3FinishPosition;
     public static string AICar3Name;
     public static float AICar3RTMinutes;
     public static float AICar3RTSeconds;
-
     public static int AICar4FinishPosition;
     public static string AICar4Name;
     public static float AICar4RTMinutes;
     public static float AICar4RTSeconds;
-
     public static int AICar5FinishPosition;
     public static string AICar5Name;
     public static float AICar5RTMinutes;
     public static float AICar5RTSeconds;
-
     public static int AICar6FinishPosition;
     public static string AICar6Name;
     public static float AICar6RTMinutes;
     public static float AICar6RTSeconds;
-
     public static int AICar7FinishPosition;
     public static string AICar7Name;
     public static float AICar7RTMinutes;
     public static float AICar7RTSeconds;
-
+    private void Start()
+    {
+        AICar1FinishPosition = 0;
+        AICar1RTMinutes = 0;
+        AICar1RTSeconds = 0;
+        AICar2FinishPosition = 0;
+        AICar2RTMinutes = 0;
+        AICar2RTSeconds = 0;
+        AICar3FinishPosition = 0;
+        AICar3RTMinutes = 0;
+        AICar3RTSeconds = 0;
+        AICar4FinishPosition = 0;
+        AICar4RTMinutes = 0;
+        AICar4RTSeconds = 0;
+        AICar5FinishPosition = 0;
+        AICar5RTMinutes = 0;
+        AICar5RTSeconds = 0;
+        AICar6FinishPosition = 0;
+        AICar6RTMinutes = 0;
+        AICar6RTSeconds = 0;
+        AICar7FinishPosition = 0;
+        AICar7RTMinutes = 0;
+        AICar7RTSeconds = 0;
+    }
     private void OnTriggerEnter(Collider other)
     {
-        if(AI1 == true)
-        { 
+        if (AI1 == true)
+        {
             if (other.gameObject.CompareTag("ProgressAI1"))
             {
                 SaveScript.FinishPositionID++;
@@ -59,7 +75,6 @@ public class FinishLineAI : MonoBehaviour
                 AICar1Name = CarName;
                 AICar1RTMinutes = SaveScript.RaceTimeMinutes;
                 AICar1RTSeconds = SaveScript.RaceTimeSeconds;
-
             }
         }
         if (AI2 == true)

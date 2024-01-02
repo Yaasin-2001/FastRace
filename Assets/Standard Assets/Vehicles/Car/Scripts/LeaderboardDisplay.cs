@@ -17,8 +17,6 @@ public class LeaderboardDisplay : MonoBehaviour
     public bool AI6;
     public bool AI7;
     public bool Player;
-
-
     // Update is called once per frame
     void Update()
     {
@@ -33,7 +31,6 @@ public class LeaderboardDisplay : MonoBehaviour
             if (FinishLineAI.AICar1RTMinutes >= 10)
             {
                 Minutes.text = Mathf.Round(FinishLineAI.AICar1RTMinutes).ToString() + ":";
-
             }
             if (FinishLineAI.AICar1RTSeconds <= 9)
             {
@@ -192,16 +189,4 @@ public class LeaderboardDisplay : MonoBehaviour
             }
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
 }
