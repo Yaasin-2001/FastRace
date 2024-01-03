@@ -134,13 +134,13 @@ public class UITimeTrial : MonoBehaviour
         }
         UniversalSave.Saving = true;
     }
-     public void ReturnToMenu()
-     {
-         SceneManager.LoadScene(1);
-     }
-     public void QuitClose()
-     {
-         QuitPanel.SetActive(false);
-     }
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene(1);
+    }
+    public void QuitClose()
+    {
+        QuitPanel.SetActive(false);
+    }
 }
-   
+

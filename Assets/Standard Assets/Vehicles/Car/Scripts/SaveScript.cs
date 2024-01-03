@@ -59,9 +59,6 @@ public class SaveScript : MonoBehaviour
     public static int AICar7LapNumber = 0;
     public static int FinishPositionID = 0;
     public static int SportsCarID;
-    public static bool Joypad = false;
-
-
 
     // Start is called before the first frame update
     void Start()

@@ -49,12 +49,5 @@ public class UIStats : MonoBehaviour
     {
         StatsPanel.SetActive(false);
     }
-    public void KeyboardController()
-    {
-        SaveScript.Joypad = false;
-    }
-    public void JoypadController()
-    {
-        SaveScript.Joypad = true;
-    }
+    
 }

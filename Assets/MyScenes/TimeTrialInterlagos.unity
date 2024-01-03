@@ -1126,7 +1126,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1000
+  m_Text: '-'
 --- !u!222 &160145075
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2641,6 +2641,7 @@ GameObject:
   - component: {fileID: 340147445}
   - component: {fileID: 340147442}
   - component: {fileID: 340147446}
+  - component: {fileID: 340147447}
   m_Layer: 0
   m_Name: ProgressWaypoint (109)
   m_TagString: Untagged
@@ -2701,6 +2702,26 @@ MonoBehaviour:
   PenaltyOption: 0
   PenaltyWayPoint: 0
   Position: 0
+--- !u!114 &340147447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340147441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ddd2505765e7fb41ab709917eaa952d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FinishPoint: {fileID: 324738008}
+  FinishPointAI1: {fileID: 0}
+  FinishPointAI2: {fileID: 0}
+  FinishPointAI3: {fileID: 0}
+  FinishPointAI4: {fileID: 0}
+  FinishPointAI5: {fileID: 0}
+  FinishPointAI6: {fileID: 0}
+  FinishPointAI7: {fileID: 0}
 --- !u!1 &356580013
 GameObject:
   m_ObjectHideFlags: 0
@@ -3478,8 +3499,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 390269220}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.05007756, y: 0.6440038, z: -0.04231147, w: 0.76220804}
-  m_LocalPosition: {x: 163.62805, y: 1.7799999, z: -132.96056}
+  m_LocalRotation: {x: 0.050077535, y: 0.64400446, z: -0.04231152, w: 0.7622075}
+  m_LocalPosition: {x: 189.17595, y: 1.7799999, z: -128.6346}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15743,7 +15764,7 @@ Transform:
   m_GameObject: {fileID: 1063556373}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.64539236, z: -0, w: 0.7638513}
-  m_LocalPosition: {x: 168.2621, y: 0.099999905, z: -132.17595}
+  m_LocalPosition: {x: 193.81, y: 0.099999905, z: -127.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16220,7 +16241,7 @@ WheelCollider:
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
-    m_ExtremumSlip: 0.4
+    m_ExtremumSlip: 0.1
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.8
     m_AsymptoteValue: 0.5
@@ -16259,7 +16280,7 @@ WheelCollider:
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
-    m_ExtremumSlip: 0.4
+    m_ExtremumSlip: 0.1
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.8
     m_AsymptoteValue: 0.5
@@ -16298,7 +16319,7 @@ WheelCollider:
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
-    m_ExtremumSlip: 0.4
+    m_ExtremumSlip: 0.1
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.8
     m_AsymptoteValue: 0.5
@@ -16337,7 +16358,7 @@ WheelCollider:
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
-    m_ExtremumSlip: 0.4
+    m_ExtremumSlip: 0.1
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.8
     m_AsymptoteValue: 0.5
@@ -18061,7 +18082,6 @@ GameObject:
   - component: {fileID: 1284591657}
   - component: {fileID: 1284591654}
   - component: {fileID: 1284591658}
-  - component: {fileID: 1284591659}
   m_Layer: 0
   m_Name: ProgressWaypoint (50)
   m_TagString: Untagged
@@ -18122,26 +18142,6 @@ MonoBehaviour:
   PenaltyOption: 0
   PenaltyWayPoint: 0
   Position: 0
---- !u!114 &1284591659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1284591653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ddd2505765e7fb41ab709917eaa952d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FinishPoint: {fileID: 0}
-  FinishPointAI1: {fileID: 0}
-  FinishPointAI2: {fileID: 0}
-  FinishPointAI3: {fileID: 0}
-  FinishPointAI4: {fileID: 0}
-  FinishPointAI5: {fileID: 0}
-  FinishPointAI6: {fileID: 0}
-  FinishPointAI7: {fileID: 0}
 --- !u!1 &1297766216
 GameObject:
   m_ObjectHideFlags: 0
@@ -21792,12 +21792,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeTrial: 1
-  GoldMinutes: 0
-  GoldSeconds: 55
+  GoldMinutes: 1
+  GoldSeconds: 0
   SilverMinutes: 1
-  SilverSeconds: 2
-  BronzeMinutes: 1
-  BronzeSeconds: 30
+  SilverSeconds: 30
+  BronzeMinutes: 2
+  BronzeSeconds: 0
 --- !u!1 &1719118827
 GameObject:
   m_ObjectHideFlags: 0
@@ -21944,7 +21944,7 @@ MonoBehaviour:
   CheckPointDisplay: {fileID: 711609213}
   NewLapRecord: {fileID: 392542120}
   WrongWayText: {fileID: 186294098}
-  RaceTrack: 1
+  RaceTrack: 0
   F1Opponent1: {fileID: 0}
   F1Opponent2: {fileID: 0}
   F1Opponent3: {fileID: 0}
@@ -22065,8 +22065,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1725667165}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.05007756, y: 0.6440038, z: -0.04231147, w: 0.76220804}
-  m_LocalPosition: {x: 163.62805, y: 1.7799999, z: -132.96056}
+  m_LocalRotation: {x: 0.050077535, y: 0.64400446, z: -0.04231152, w: 0.7622075}
+  m_LocalPosition: {x: 189.17595, y: 1.7799999, z: -128.6346}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
